@@ -17,7 +17,7 @@ services:
       - *env-postgres-user
       - *env-postgres-password
     ports:
-      - ${POSTGRES_PORT}:5432
+      - 5443:5432
 #port pierwszzy 5433 albo 5443
     volumes:
       - postgis-prge-data:/var/lib/postgresql/data
