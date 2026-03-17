@@ -11,7 +11,7 @@ services:
       context: ..
       dockerfile: docker/postgis/Dockerfile
     image: 'prge_2025_03_am_postgis'
-    container_name: prge-2025-03-AM-postgis-${ENV_NAME}
+    container_name: prge-2025-03-AM-postgis-qa
     environment:
       - *env-postgres-db
       - *env-postgres-user
