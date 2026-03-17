@@ -1,0 +1,37 @@
+name: build and push and deploy
+on:
+  push:
+    branches:
+      - qa
+      - main
+permissions:
+  contents: read
+  packages: write
+
+
+jobs:
+  build-and-deploy:
+    name: Build and push
+    runs-on:
+      - self-hosted
+
+    environment: ${{ github.ref_name }}
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Wyswietl napis
+        run: echo 'HELLOO'
+
+      - name: building and settitng up docker-compose
+
+        env:
+          ENV_NAME: ${{ github.ref.name }}
+          POSTGRES_DB: ${{ secrets.POSTGRES_DB }}
+          POSTGRES_USER: ${{ secrets.POSTGRES_USER }}
+          POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
+          POSTGRES_HOST: ${{ secrets.POSTGRES_HOST }}
+          POSTGRES_PORT: ${{ secrets.POSTGRES_PORT }}
+
+        run:
+          docker-compose -f ./docker-compose/docker-compose-prge-remote.yml -p remote_prge_2025_03_am up --build -d
