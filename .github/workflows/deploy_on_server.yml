@@ -34,4 +34,4 @@ jobs:
           POSTGRES_PORT: ${{ secrets.POSTGRES_PORT }}
 
         run:
-          docker-compose -f ./docker-compose/docker-compose-prge-remote.yml -p remote_prge_2025_03_AM up --build -d
+          docker-compose -f ./docker-compose/docker-compose-prge-remote.yml -p remote_prge_2025_03_am up --build -d
