@@ -1,0 +1,24 @@
+name: build and push and deploy
+on:
+  push:
+    branches:
+      - qa
+#      - main
+permissions:
+  contents: read
+  packages: write
+
+
+jobs:
+  build-and-deploy:
+    name: Build and push
+    runs-on:
+      - self-hosted
+
+    environment: ${{ github.ref_name }}
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Wyswietl napis
+        run: echo "HELLOO"
