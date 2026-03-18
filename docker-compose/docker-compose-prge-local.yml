@@ -11,13 +11,13 @@ services:
       context: ..
       dockerfile: docker/postgis/Dockerfile
     image: 'prge_2025_03_am_postgis'
-    container_name: 'prge_2025_03_AM_postgis'
+    container_name: 'prge_2025_03_am_postgis'
     environment:
       - *env-postgres-db
       - *env-postgres-user
       - *env-postgres-password
     ports:
-      - 5433:5432
+      - 5443:5432
     volumes:
       - postgis-prge-local:/var/lib/postgresql/data
 volumes:
