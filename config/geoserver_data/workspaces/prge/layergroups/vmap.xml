@@ -1,0 +1,65 @@
+<layerGroup>
+  <id>LayerGroupInfoImpl--34aa2f4:19d0aab672b:-7fa3</id>
+  <name>vmap</name>
+  <mode>SINGLE</mode>
+  <workspace>
+    <id>WorkspaceInfoImpl--34aa2f4:19d0aab672b:-7fe3</id>
+  </workspace>
+  <internationalTitle/>
+  <internationalAbstract/>
+  <publishables>
+    <published type="layer">
+      <id>LayerInfoImpl--34aa2f4:19d0aab672b:-7fd7</id>
+    </published>
+    <published type="layer">
+      <id>LayerInfoImpl--34aa2f4:19d0aab672b:-7fc1</id>
+    </published>
+    <published type="layer">
+      <id>LayerInfoImpl--34aa2f4:19d0aab672b:-7fc5</id>
+    </published>
+    <published type="layer">
+      <id>LayerInfoImpl--34aa2f4:19d0aab672b:-7fb4</id>
+    </published>
+    <published type="layer">
+      <id>LayerInfoImpl--34aa2f4:19d0aab672b:-7fbe</id>
+    </published>
+    <published type="layer">
+      <id>LayerInfoImpl--34aa2f4:19d0aab672b:-7fb8</id>
+    </published>
+    <published type="layer">
+      <id>LayerInfoImpl--34aa2f4:19d0aab672b:-7fb0</id>
+    </published>
+  </publishables>
+  <styles>
+    <style>
+      <id>StyleInfoImpl--34aa2f4:19d0aab672b:-7fd4</id>
+    </style>
+    <style>
+      <id>StyleInfoImpl--34aa2f4:19d0aab672b:-7fd2</id>
+    </style>
+    <style>
+      <id>StyleInfoImpl--34aa2f4:19d0aab672b:-7fd3</id>
+    </style>
+    <style>
+      <id>StyleInfoImpl--34aa2f4:19d0aab672b:-7fcd</id>
+    </style>
+    <style>
+      <id>StyleInfoImpl--34aa2f4:19d0aab672b:-7fd1</id>
+    </style>
+    <style>
+      <id>StyleInfoImpl--34aa2f4:19d0aab672b:-7fd0</id>
+    </style>
+    <style>
+      <id>StyleInfoImpl--34aa2f4:19d0aab672b:-7fcc</id>
+    </style>
+  </styles>
+  <bounds>
+    <minx>14.5</minx>
+    <maxx>18.113296508789062</maxx>
+    <miny>51.0748405456543</miny>
+    <maxy>52.06864929199219</maxy>
+    <crs>EPSG:4326</crs>
+  </bounds>
+  <dateCreated>2026-03-20 12:13:56.771 UTC</dateCreated>
+  <dateModified>2026-03-20 12:14:45.506 UTC</dateModified>
+</layerGroup>

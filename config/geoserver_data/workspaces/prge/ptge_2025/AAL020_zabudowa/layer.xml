@@ -1,0 +1,16 @@
+<layer>
+  <name>AAL020_zabudowa</name>
+  <id>LayerInfoImpl--34aa2f4:19d0aab672b:-7fc5</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--34aa2f4:19d0aab672b:-7fd3</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--34aa2f4:19d0aab672b:-7fc6</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2026-03-20 12:02:20.859 UTC</dateCreated>
+</layer>
