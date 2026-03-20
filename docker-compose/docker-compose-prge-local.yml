@@ -20,5 +20,18 @@ services:
       - 5443:5432
     volumes:
       - postgis-prge-local:/var/lib/postgresql/data
+
+
+
+  geoserver:
+    build:
+      context: ..
+      dockerfile: docker/geoserver/Dockerfile
+    image: 'prge_2025_03_am_geoserver'
+    container_name: 'prge_2025_03_am_geoserver'
+    ports:
+      - 9000:8080
+
+
 volumes:
   postgis-prge-local:
