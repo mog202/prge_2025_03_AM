@@ -208,3 +208,4 @@ __marimo__/
 
 data
 /config/geoserver_data/security/
+/config/geoserver_data/logs/
