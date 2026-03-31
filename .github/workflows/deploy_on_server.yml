@@ -36,6 +36,8 @@ jobs:
           #Geoserver
           POSTGRES_HOST: ${{ secrets.POSTGRES_HOST }}
           POSTGRES_PORT: ${{ secrets.POSTGRES_PORT }}
+          GEOSERVER_PORT: ${{ secrets.GEOSERVER_PORT }}
+
 
         run:
           docker-compose -f ./docker-compose/docker-compose-prge-remote.yml -p remote-prge_2025_03_am-${{ github.ref_name }} up --build -d
