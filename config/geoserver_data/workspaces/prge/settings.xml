@@ -1,0 +1,49 @@
+<settings>
+  <id>SettingsInfoImpl--34aa2f4:19d0aab672b:-7fdd</id>
+  <workspace>
+    <id>WorkspaceInfoImpl--34aa2f4:19d0aab672b:-7fe3</id>
+    <name>prge</name>
+    <isolated>false</isolated>
+    <dateCreated>2026-03-20 10:14:34.634 UTC</dateCreated>
+    <dateModified>2026-03-20 11:34:49.172 UTC</dateModified>
+  </workspace>
+  <contact>
+    <id>contact</id>
+    <contactEmail>adam.mogielnicki@student.wat.edu.pl</contactEmail>
+    <contactOrganization>MUT</contactOrganization>
+    <contactPerson>Adam</contactPerson>
+    <contactPosition>developer</contactPosition>
+    <internationalAddress class="org.geotools.util.GrowableInternationalString"/>
+    <internationalAddressCity class="org.geotools.util.GrowableInternationalString"/>
+    <internationalAddressCountry class="org.geotools.util.GrowableInternationalString"/>
+    <internationalAddressDeliveryPoint class="org.geotools.util.GrowableInternationalString"/>
+    <internationalAddressPostalCode class="org.geotools.util.GrowableInternationalString"/>
+    <internationalAddressState class="org.geotools.util.GrowableInternationalString"/>
+    <internationalAddressType class="org.geotools.util.GrowableInternationalString"/>
+    <internationalContactEmail class="org.geotools.util.GrowableInternationalString"/>
+    <internationalContactFacsimile class="org.geotools.util.GrowableInternationalString"/>
+    <internationalContactOrganization class="org.geotools.util.GrowableInternationalString"/>
+    <internationalContactPerson class="org.geotools.util.GrowableInternationalString"/>
+    <internationalContactPosition class="org.geotools.util.GrowableInternationalString"/>
+    <internationalContactVoice class="org.geotools.util.GrowableInternationalString"/>
+    <internationalOnlineResource class="org.geotools.util.GrowableInternationalString"/>
+    <internationalWelcome class="org.geotools.util.GrowableInternationalString"/>
+  </contact>
+  <charset>UTF-8</charset>
+  <numDecimals>4</numDecimals>
+  <verbose>true</verbose>
+  <verboseExceptions>false</verboseExceptions>
+  <metadata>
+    <map>
+      <entry>
+        <string>quietOnNotFound</string>
+        <boolean>false</boolean>
+      </entry>
+    </map>
+  </metadata>
+  <localWorkspaceIncludesPrefix>false</localWorkspaceIncludesPrefix>
+  <showCreatedTimeColumnsInAdminList>false</showCreatedTimeColumnsInAdminList>
+  <showModifiedTimeColumnsInAdminList>false</showModifiedTimeColumnsInAdminList>
+  <showModifiedUserAdminList>false</showModifiedUserAdminList>
+  <useHeadersProxyURL>false</useHeadersProxyURL>
+</settings>
