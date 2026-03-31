@@ -36,7 +36,7 @@ jobs:
           POSTGRES_HOST: ${{ secrets.POSTGRES_HOST }}
           POSTGRES_PORT: ${{ secrets.POSTGRES_PORT }}
           GEOSERVER_PORT: ${{ secrets.GEOSERVER_PORT }}
-          #fastapi
+          #fastapi test
           FASTAPI_PORT: ${{ secrets.FASTAPI_PORT }}
 
 
