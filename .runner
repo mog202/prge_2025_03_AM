@@ -1,0 +1,4 @@
+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
+
+
+docker run -d --name github-runner-prge-2025 --restart always -e REPO_URL="https://github.com/mog202/prge_2025_03_AM/" -e ACCESS_TOKEN="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" -e RUNNER_NAME="prge-2025" -e RUNNER_WORKDIR="/tmp/github-runner" -e RUNNER_LABELS="prge-2025" -v /var/run/docker.sock:/var/run/docker.sock myoung34/github-runner:latest
