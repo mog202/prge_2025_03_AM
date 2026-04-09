@@ -3,7 +3,7 @@ from sqlalchemy import create_engine, text
 from pydantic import BaseModel
 
 from app.settings import db_name, db_user, db_password
-
+from app.shared_lib.prge_shared.db.conn import engine
 from app.shared_lib.prge_shared.spatial import get_coordinates
 
 router_db_insert = APIRouter()
@@ -16,8 +16,7 @@ class UserData(BaseModel):
 @router_db_insert.post("/insert_users")
 async def insert_users(user:UserData):
     try:
-        connection_string = f"postgresql://{db_user}:{db_password}@postgis:5432/{db_name}"
-        engine = create_engine(connection_string)
+
 
         params = {"name": user.name,
                   "posts": user.posts,

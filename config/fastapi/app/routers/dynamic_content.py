@@ -2,6 +2,7 @@ from fastapi import APIRouter
 from sqlalchemy import create_engine, text
 from app.settings import db_name, db_user, db_password
 
+from app.shared_lib.prge_shared.db_conn import engine
 router_dynamic_users_from_db = APIRouter()
 
 @router_dynamic_users_from_db.get("/users_dynamic")
