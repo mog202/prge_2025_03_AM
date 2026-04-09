@@ -4,6 +4,8 @@ from pydantic import BaseModel
 
 from app.settings import db_name, db_user, db_password
 
+from app.shared_lib.prge_shared.spatial import get_coordinates
+
 router_db_insert = APIRouter()
 
 class UserData(BaseModel):
@@ -17,9 +19,16 @@ async def insert_users(user:UserData):
         connection_string = f"postgresql://{db_user}:{db_password}@postgis:5432/{db_name}"
         engine = create_engine(connection_string)
 
-        params = {"name": user.name, "posts": user.posts, "location": user.location}
+        params = {"name": user.name,
+                  "posts": user.posts,
+                  "location": user.location,
+                  "lat": get_coordinates(user.location)[0],
+                  "lng": get_coordinates(user.location)[1]
+                  }
 
-        sql_query = text("""insert into users (name, posts, location) values (:name, :posts, :location);""")
+        sql_query = text("""insert into users (name, posts, location, geom) 
+                            values (:name, :posts, :location, 'SRID=4326;POINT(:lng :lat)');
+                         """)
 
         with engine.connect() as connection:
             results = connection.execute(sql_query, params)

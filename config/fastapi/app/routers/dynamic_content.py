@@ -7,7 +7,6 @@ router_dynamic_users_from_db = APIRouter()
 @router_dynamic_users_from_db.get("/users_dynamic")
 async def get_user():
     try:
-        print(f"postgresql://{db_user}:{db_password}@postgis:5432/{db_name}")
         connection_string = f"postgresql://{db_user}:{db_password}@postgis:5432/{db_name}"
         engine = create_engine(connection_string)
 
