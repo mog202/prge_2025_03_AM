@@ -1,5 +1,5 @@
 x-enviroment:
-  - &env-postgres-db POSTGRES_db=${POSTGRES_DB}
+  - &env-postgres-db POSTGRES_DB=${POSTGRES_DB}
   - &env-postgres-user POSTGRES_USER=${POSTGRES_USER}
   - &env-postgres-password POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
 
