@@ -1,0 +1,82 @@
+.services {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4ecf7 100%);
+    font-family: 'Roboto', sans-serif;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.services__container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+}
+
+.services__title {
+    color: #1a365d;
+    font-weight: 700 !important;
+    margin-bottom: 8px !important;
+}
+
+.services__subtitle {
+    color: #718096;
+    margin-bottom: 40px !important;
+}
+
+/* Nowoczesna siatka dla 5 przycisków */
+.services__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dwie równe kolumny */
+    gap: 20px;
+}
+
+.services__button {
+    color: #fff !important;
+    height: 70px;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    border-radius: 10px !important;
+    text-transform: none !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Przycisk mapy rozciąga się na pełną szerokość (obie kolumny) */
+.services__button--map {
+    grid-column: span 2;
+    background-color: #2b6cb0 !important; /* Klasyczny niebieski */
+}
+
+/* Kolorystyka dla sekcji Lekarzy */
+.services__button--doctor {
+    background-color: #2c5282 !important; /* Ciemniejszy, stonowany niebieski */
+}
+
+/* Kolorystyka dla sekcji Pacjentów */
+.services__button--patient {
+    background-color: #319795 !important; /* Medyczny turkus */
+}
+
+/* Efekty hover dla wszystkich przycisków */
+.services__button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12) !important;
+    filter: brightness(90%);
+}
+
+/* Responsywność: Na małych ekranach telefoów przyciski będą jeden pod drugim */
+@media (max-width: 600px) {
+    .services__grid {
+        grid-template-columns: 1fr;
+    }
+    .services__button--map {
+        grid-column: span 1;
+    }
+}

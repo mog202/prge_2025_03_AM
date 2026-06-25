@@ -1,17 +1,58 @@
-.home__button {
-    bockground-color: #4a90e6;
-    color: #fff;
-    width: 300px;
-    height: 50px;
-    font-size: 36px;
-    border-radius: 10px;
-    margin-top: 10px;
-}
-
 .home {
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-content: center;
+    align-items: center; /* Idealne centrowanie w pionie */
+    text-align: center;  /* Centrowanie tekstu */
+    /* Nowoczesne, medyczne tło z delikatnym gradientem */
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4ecf7 100%);
+    font-family: 'Roboto', sans-serif;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Karta na środku ekranu, która nadaje nowoczesny wygląd (tzw. Glassmorphism) */
+.home__card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 50px 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    max-width: 600px;
+    width: 100%;
+    display: flex;
     flex-direction: column;
+    align-items: center;
+}
+
+.home__title {
+    color: #1a365d; /* Głęboki, profesjonalny granat */
+    font-weight: 700 !important;
+    letter-spacing: 1px;
+    margin-bottom: 15px !important;
+}
+
+.home__subtitle {
+    color: #4a5568; /* Stonowany, czytelny szary */
+    margin-bottom: 35px !important;
+    font-weight: 400 !important;
+    line-height: 1.5 !important;
+}
+
+.home__button {
+    background-color: #2b6cb0 !important; /* Medyczny odcień niebieskiego */
+    color: #fff !important;
+    width: 280px;
+    height: 55px;
+    font-size: 18px !important; /* Optymalny rozmiar czcionki */
+    font-weight: 600 !important;
+    border-radius: 8px !important;
+    text-transform: none !important; /* Wyłącza wymuszone wielkie litery MUI dla naturalnego wyglądu */
+    transition: all 0.3s ease !important;
+}
+
+/* Efekt najechania myszką na przycisk */
+.home__button:hover {
+    background-color: #1a4975 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(43, 108, 176, 0.4);
 }

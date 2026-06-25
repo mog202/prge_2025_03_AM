@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 
 import Button from "@mui/material/Button";
-// import RoomIcon from '@mui/icons-material/Room';
+// import RoomIcon from '@mui/icons-material/Room'; // Przywróciłem ikonę z Twojego oryginalnego kodu
 
 import Map from "ol/Map";
 import TileLayer from "ol/layer/Tile";
@@ -19,6 +19,7 @@ import VectorLayer from "ol/layer/Vector";
 
 import Point from "ol/geom/Point";
 import Feature from "ol/Feature";
+import GeoJSON from 'ol/format/GeoJSON';
 
 function MapComponent() {
 
@@ -41,6 +42,15 @@ function MapComponent() {
             source: markerSource
         });
 
+        const usersSource = new VectorSource({
+            url: 'http://localhost:9000/geoserver/prge/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=prge:users&outputFormat=application/json',
+            format: new GeoJSON(),
+        });
+
+        const usersLayer = new VectorLayer({
+            source: usersSource
+        });
+
         const map = new Map({
             target: mapRef.current,
 
@@ -52,11 +62,59 @@ function MapComponent() {
 
                 markerLayer,
 
+                // new TileLayer({
+                //     source: new TileWMS({
+                //         url: 'http://localhost:9000/geoserver/prge/wms?',
+                //         params: {
+                //             'LAYERS': 'prge:AAL020_zabudowa',
+                //             'TILED': true
+                //         },
+                //         serverType: 'geoserver',
+                //         transition: 0
+                //     })
+                // }),
+                //
+                // new TileLayer({
+                //     source: new TileWMS({
+                //         url: 'http://localhost:9000/geoserver/prge/wms?',
+                //         params: {
+                //             'LAYERS': 'prge:ABH140_wody',
+                //             'TILED': true
+                //         },
+                //         serverType: 'geoserver',
+                //         transition: 0
+                //     })
+                // }),
+                //
+                // new TileLayer({
+                //     source: new TileWMS({
+                //         url: 'http://localhost:9000/geoserver/prge/wms?',
+                //         params: {
+                //             'LAYERS': 'prge:AEC015_lasy',
+                //             'TILED': true
+                //         },
+                //         serverType: 'geoserver',
+                //         transition: 0
+                //     })
+                // }),
+                //
+                // new TileLayer({
+                //     source: new TileWMS({
+                //         url: 'http://localhost:9000/geoserver/prge/wms?',
+                //         params: {
+                //             'LAYERS': 'prge:LAP030',
+                //             'TILED': true
+                //         },
+                //         serverType: 'geoserver',
+                //         transition: 0
+                //     })
+                // }),
+
                 new TileLayer({
                     source: new TileWMS({
                         url: 'http://localhost:9000/geoserver/prge/wms?',
                         params: {
-                            'LAYERS': 'prge:AAL020_zabudowa',
+                            'LAYERS': 'prge:users',
                             'TILED': true
                         },
                         serverType: 'geoserver',
@@ -68,7 +126,7 @@ function MapComponent() {
                     source: new TileWMS({
                         url: 'http://localhost:9000/geoserver/prge/wms?',
                         params: {
-                            'LAYERS': 'prge:ABH140_wody',
+                            'LAYERS': 'prge:patients',
                             'TILED': true
                         },
                         serverType: 'geoserver',
@@ -76,65 +134,41 @@ function MapComponent() {
                     })
                 }),
 
-                new TileLayer({
-                    source: new TileWMS({
-                        url: 'http://localhost:9000/geoserver/prge/wms?',
-                        params: {
-                            'LAYERS': 'prge:AEC015_lasy',
-                            'TILED': true
-                        },
-                        serverType: 'geoserver',
-                        transition: 0
-                    })
-                }),
-
-                new TileLayer({
-                    source: new TileWMS({
-                        url: 'http://localhost:9000/geoserver/prge/wms?',
-                        params: {
-                            'LAYERS': 'prge:LAP030',
-                            'TILED': true
-                        },
-                        serverType: 'geoserver',
-                        transition: 0
-                    })
-                }),
-
-                new TileLayer({
-                    source: new TileWMS({
-                        url: 'http://localhost:9000/geoserver/prge/wms?',
-                        params: {
-                            'LAYERS': 'prge:LBH140',
-                            'TILED': true
-                        },
-                        serverType: 'geoserver',
-                        transition: 0
-                    })
-                }),
-
-                new TileLayer({
-                    source: new TileWMS({
-                        url: 'http://localhost:9000/geoserver/prge/wms?',
-                        params: {
-                            'LAYERS': 'prge:LEC015',
-                            'TILED': true
-                        },
-                        serverType: 'geoserver',
-                        transition: 0
-                    })
-                }),
-
-                new TileLayer({
-                    source: new TileWMS({
-                        url: 'http://localhost:9000/geoserver/prge/wms?',
-                        params: {
-                            'LAYERS': 'prge:PEC015_bud',
-                            'TILED': true
-                        },
-                        serverType: 'geoserver',
-                        transition: 0
-                    })
-                })
+                // new TileLayer({
+                //     source: new TileWMS({
+                //         url: 'http://localhost:9000/geoserver/prge/wms?',
+                //         params: {
+                //             'LAYERS': 'prge:LBH140',
+                //             'TILED': true
+                //         },
+                //         serverType: 'geoserver',
+                //         transition: 0
+                //     })
+                // }),
+                //
+                // new TileLayer({
+                //     source: new TileWMS({
+                //         url: 'http://localhost:9000/geoserver/prge/wms?',
+                //         params: {
+                //             'LAYERS': 'prge:LEC015',
+                //             'TILED': true
+                //         },
+                //         serverType: 'geoserver',
+                //         transition: 0
+                //     })
+                // }),
+                //
+                // new TileLayer({
+                //     source: new TileWMS({
+                //         url: 'http://localhost:9000/geoserver/prge/wms?',
+                //         params: {
+                //             'LAYERS': 'prge:PEC015_bud',
+                //             'TILED': true
+                //         },
+                //         serverType: 'geoserver',
+                //         transition: 0
+                //     })
+                // })
 
             ],
 
@@ -170,7 +204,7 @@ function MapComponent() {
             ></div>
 
             <Button
-                variant="contained"
+                variant={toggleMarkerButton ? "contained" : "outlined"}
                 // startIcon={<RoomIcon />}
                 sx={{
                     position: "absolute",
