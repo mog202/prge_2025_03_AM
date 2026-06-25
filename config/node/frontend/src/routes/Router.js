@@ -1,30 +1,52 @@
-import {createBrowserRouter} from 'react-router-dom';
-import {Home, About, Map, Services, ListOfItems} from "./LazyImports";
+import { createBrowserRouter } from 'react-router-dom';
+import {
+    Home,
+    About,
+    Map,
+    Services,
+    NewUser,       // Lekarz dodaj
+    ListOfItems,   // Lekarz lista
+    AddPatient,    // Pacjent dodaj
+    PatientList    // Pacjent lista
+} from "./LazyImports";
 
 const routes = createBrowserRouter(
     [
         {
             path: '/',
-            element: <Home/>
+            element: <Home />
         },
         {
             path: '/about',
-            element: <About/>
+            element: <About />
         },
         {
             path: '/map',
-            element: <Map/>
+            element: <Map />
         },
         {
             path: '/services',
-            element: <Services/>
+            element: <Services />
+        },
+        // LEKARZE - kierują do starych komponentów
+        {
+            path: '/add-doctor',
+            element: <NewUser />
         },
         {
-            path: '/list',
-            element: <ListOfItems/>
+            path: '/doctors',
+            element: <ListOfItems />
+        },
+        // PACJENCI - kierują do nowych komponentów
+        {
+            path: '/add-patient',
+            element: <AddPatient />
+        },
+        {
+            path: '/patients',
+            element: <PatientList />
         }
     ]
-)
-
+);
 
 export default routes;
